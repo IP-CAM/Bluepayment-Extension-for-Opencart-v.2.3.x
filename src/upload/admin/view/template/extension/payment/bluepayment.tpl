@@ -46,14 +46,14 @@
                             <div class="introduction--check"></div>
                             <div class="introduction--content">
                                 <?php echo $prepare_regulations; ?><br />
-                                <a href="https://developers.bluemedia.pl/legal-geek?mtm_campaign=magento_legalgeek&mtm_source=magento_backoffice&mtm_medium=cta"
+                                <a href="https://developers.bluemedia.pl/legal-geek?mtm_campaign=opencart_legalgeek&mtm_source=opencart_backoffice&mtm_medium=cta"
                                    target="_blank"><?php echo $introduction_learn; ?></a>
                             </div>
                         </div>
                         <div class="introduction--col">
                             <div class="introduction--check"></div>
                             <div class="introduction--content">
-                                <a href="https://platnosci.bm.pl/?pk_campaign=magento_panel&pk_source=magento_panel&pk_medium=cta"
+                                <a href="https://platnosci.bm.pl/?pk_campaign=opencart_panel&pk_source=opencart_panel&pk_medium=cta"
                                    class="introduction--link" target="_blank"><?php echo $fee; ?></a><br />
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                             <div class="introduction--num">1</div>
                             <div class="introduction--content introduction--content__padding">
                                 <?php echo $introduction_first_step; ?><br />
-                                <a href="https://platnosci.bm.pl/?pk_campaign=magento_panel&pk_source=magento_panel&pk_medium=cta"
+                                <a href="https://platnosci.bm.pl/?pk_campaign=opencart_panel&pk_source=opencart_panel&pk_medium=cta"
                                    class="introduction--link" target="_blank"><?php echo $introduction_register; ?></a>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                     </div>
 
                     <p class="introduction--learn-more">
-                        <a href="https://developers.bluemedia.pl/online/wdrozenie-krok-po-kroku?mtm_campaign=magento_developers_aktywacja_platnosci&mtm_source=magento_backend&mtm_medium=hyperlink"
+                        <a href="https://developers.bluemedia.pl/online/wdrozenie-krok-po-kroku?mtm_campaign=opencart_developers_aktywacja_platnosci&mtm_source=opencart_backend&mtm_medium=hyperlink"
                            target="_blank" class="introduction--link"><?php echo $introduction_learn; ?></a>
                         <?php echo $introduction_learn2; ?>
                     </p>
@@ -149,7 +149,7 @@
                             <div class="alert alert-info">
                                 <i class="fa fa-info-circle"></i>
                                 <?php echo $helper_test_mode_alert_1; ?><br />
-                                <?php echo $helper_test_mode_alert_2; ?> <a href="https://developers.bluemedia.pl/kontakt?mtm_campaign=magento_panel&mtm_source=magento_panel&mtm_medium=hiperlink" target="_blank"><?php echo $helper_test_mode_alert_3; ?></a>.
+                                <?php echo $helper_test_mode_alert_2; ?> <a href="https://developers.bluemedia.pl/kontakt?mtm_campaign=opencart_developers_formularz&mtm_source=opencart_backoffice&mtm_medium=hiperlink" target="_blank"><?php echo $helper_test_mode_alert_3; ?></a>.
                             </div>
 
                             <div class="form-group">
