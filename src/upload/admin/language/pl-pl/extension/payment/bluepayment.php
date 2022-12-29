@@ -55,3 +55,9 @@ $_['text_yes'] = 'Tak';
 $_['text_enabled'] = 'Włączony';
 $_['text_disabled'] = 'Wyłączony';
 $_['cancel'] = 'Anuluj';
+
+// Helpers
+$_['helper_test_mode'] = 'Pozwala on na sprawdzenie działania modułu bez konieczności opłacania zamówienia (w trybie testowym nie są pobierane żadne opłaty za zamówienie).';
+$_['helper_test_mode_alert_1'] = 'Identyfikator serwisu i klucz współdzielony dla środowiska testowego różnią się od danych produkcyjnych.';
+$_['helper_test_mode_alert_2'] = 'Żeby uzyskać dane do środowiska testowego,';
+$_['helper_test_mode_alert_3'] = 'skontaktuj się z nami';

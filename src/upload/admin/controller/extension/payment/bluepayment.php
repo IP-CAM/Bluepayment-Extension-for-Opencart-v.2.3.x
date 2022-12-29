@@ -250,6 +250,10 @@ class ControllerExtensionPaymentBluepayment extends Controller
         $data['service_id'] = $this->language->get('service_id');
         $data['shared_key'] = $this->language->get('shared_key');
         $data['select_log_file'] = $this->language->get('select_log_file');
+        $data['helper_test_mode'] = $this->language->get('helper_test_mode');
+        $data['helper_test_mode_alert_1'] = $this->language->get('helper_test_mode_alert_1');
+        $data['helper_test_mode_alert_2'] = $this->language->get('helper_test_mode_alert_2');
+        $data['helper_test_mode_alert_3'] = $this->language->get('helper_test_mode_alert_3');
 
         return $data;
     }

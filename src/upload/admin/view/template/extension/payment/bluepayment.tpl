@@ -120,6 +120,7 @@
                                             <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
                                         <?php endif; ?>
                                     </select>
+
                                     <?php if (isset($error_bluepayment_status)): ?>
                                         <div class="text-danger"><?php echo $error_bluepayment_status; ?></div>
                                     <?php endif; ?>
@@ -138,10 +139,17 @@
                                             <option value="0" selected="selected"><?php echo $text_no; ?></option>
                                         <?php endif; ?>
                                     </select>
+                                    <p class="help-block"><?php echo $helper_test_mode; ?></p>
                                     <?php if (isset($error_bluepayment_test_mode)): ?>
                                         <div class="text-danger"><?php echo $error_bluepayment_test_mode; ?></div>
                                     <?php endif; ?>
                                 </div>
+                            </div>
+
+                            <div class="alert alert-info">
+                                <i class="fa fa-info-circle"></i>
+                                <?php echo $helper_test_mode_alert_1; ?><br />
+                                <?php echo $helper_test_mode_alert_2; ?> <a href="https://developers.bluemedia.pl/kontakt?mtm_campaign=magento_panel&mtm_source=magento_panel&mtm_medium=hiperlink" target="_blank"><?php echo $helper_test_mode_alert_3; ?></a>.
                             </div>
 
                             <div class="form-group">
