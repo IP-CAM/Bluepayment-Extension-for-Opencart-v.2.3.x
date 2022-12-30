@@ -55,3 +55,9 @@ $_['text_yes'] = 'Yes';
 $_['text_enabled'] = 'Enabled';
 $_['text_disabled'] = 'Disabled';
 $_['cancel'] = 'Cancel';
+
+// Helpers
+$_['helper_test_mode'] = 'It allows you to check the module without paying for the order (no order payments are charged in test mode).';
+$_['helper_test_mode_alert_1'] = 'Partner\'s website ID and Shared key are different for production and testing environment.';
+$_['helper_test_mode_alert_2'] = 'To get the data for the test environment,';
+$_['helper_test_mode_alert_3'] = 'contact us';

@@ -20,6 +20,9 @@ Do najważniejszych funkcji modułu zalicza się:
 
 ### Opis zmian
 
+Wersja 1.0.1
+- Dodaliśmy komunikat pomocniczy dot. środowiska testowego w panelu administracyjnym.
+
 Wersja 1.0.0
 - Pierwsza wersja dokumentu
 
