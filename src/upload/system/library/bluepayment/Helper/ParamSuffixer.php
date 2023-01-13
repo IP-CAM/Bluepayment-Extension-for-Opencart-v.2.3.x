@@ -1,5 +1,6 @@
 <?php
-namespace bluepayment\Helper;
+
+namespace BluePayment\Helper;
 
 final class ParamSuffixer
 {

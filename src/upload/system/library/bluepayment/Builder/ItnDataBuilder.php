@@ -1,6 +1,6 @@
 <?php
 
-namespace bluepayment\Builder;
+namespace BluePayment\Builder;
 
 use bluepayment\ValueObject\ServiceCredentials;
 use BlueMedia\OnlinePayments\Model\ItnIn;

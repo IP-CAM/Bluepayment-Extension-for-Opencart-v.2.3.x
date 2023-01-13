@@ -1,5 +1,8 @@
 <?php
-namespace bluepayment\Provider;
+
+namespace BluePayment\Provider;
+
+use BlueMedia\OnlinePayments\Gateway;
 
 final class ConfigProvider
 {
@@ -8,6 +11,13 @@ final class ConfigProvider
     public function __construct($registry)
     {
         $this->registry = $registry;
+    }
+
+    public function getGatewayMode()
+    {
+        return (int) $this->registry->get('config')->get('bluepayment_test_mode') === 1
+            ? Gateway::MODE_SANDBOX
+            : Gateway::MODE_LIVE;
     }
 
     public function getStatusPending()

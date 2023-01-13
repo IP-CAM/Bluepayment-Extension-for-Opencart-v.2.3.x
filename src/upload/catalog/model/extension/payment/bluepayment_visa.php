@@ -1,12 +1,13 @@
 <?php
 
-class ModelExtensionPaymentBluepayment extends Model
+class ModelExtensionPaymentBluepaymentVisa extends Model
 {
     public function __construct($registry)
     {
         parent::__construct($registry);
 
         $this->load->library('bluepayment/Dictionary/BluepaymentDictionary');
+        $this->load->library('bluepayment/Helper/Gateway');
     }
 
     public function getMethod($address, $total)
@@ -33,11 +34,16 @@ class ModelExtensionPaymentBluepayment extends Model
             return [];
         }
 
+        // Is gateway available?
+        if (!$this->Gateway->isVisaEnabled()) {
+            return [];
+        }
+
         $this->load->language($this->BluepaymentDictionary->getExtensionPath());
 
         return [
-            'code' => $this->BluepaymentDictionary->getExtensionName(),
-            'title' => $this->language->get('text_title'),
+            'code' => $this->BluepaymentDictionary->getExtensionName() . '_visa',
+            'title' => $this->language->get('text_title_visa'),
             'sort_order' => $this->config->get('bluepayment_sort_order'),
             'terms' => '',
         ];

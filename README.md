@@ -20,6 +20,9 @@ Do najważniejszych funkcji modułu zalicza się:
 
 ### Opis zmian
 
+Wersja 1.0.5
+- Dodaliśmy obsługę Visa Mobile.
+
 Wersja 1.0.1
 - Dodaliśmy komunikat pomocniczy dot. środowiska testowego w panelu administracyjnym.
 

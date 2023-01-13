@@ -1,5 +1,6 @@
 <?php
-namespace bluepayment\Builder;
+
+namespace BluePayment\Builder;
 
 require_once DIR_SYSTEM . '/library/bluemedia-sdk-php/index.php';
 
@@ -18,15 +19,25 @@ final class TransactionBuilder
         $this->currency = $registry->get('currency');
     }
 
-    public function build(array $order_info, $service_id, $gateway_id = null)
+    public function build(array $orderInfo, $serviceId, array $requestParams = [])
     {
-        $order_id = $this->registry->get('ParamSuffixer')->addSuffix($order_info['order_id']);
+        $order_id = $this->registry->get('ParamSuffixer')->addSuffix($orderInfo['order_id']);
 
-        return (new TransactionStandard())->setServiceId($service_id)
+        $transaction = (new TransactionStandard())->setServiceId($serviceId)
             ->setOrderId($order_id)
-            ->setAmount($this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false))
-            ->setCurrency($order_info['currency_code'])
-            ->setCustomerEmail($order_info['email'])
-            ->setGatewayId($gateway_id);
+            ->setAmount($this->currency->format($orderInfo['total'], $orderInfo['currency_code'], $orderInfo['currency_value'], false))
+            ->setCurrency($orderInfo['currency_code'])
+            ->setCustomerEmail($orderInfo['email']);
+
+        $this->setGatewayId($transaction, $requestParams);
+
+        return $transaction;
+    }
+
+    public function setGatewayId(TransactionStandard $transactionStandard, array $requestParams = [])
+    {
+        if (isset($requestParams['gateway_id'])) {
+            $transactionStandard->setGatewayId($requestParams['gateway_id']);
+        }
     }
 }

@@ -1,5 +1,6 @@
 <?php
-namespace bluepayment\Dictionary;
+
+namespace BluePayment\Dictionary;
 
 final class BluepaymentDictionary
 {

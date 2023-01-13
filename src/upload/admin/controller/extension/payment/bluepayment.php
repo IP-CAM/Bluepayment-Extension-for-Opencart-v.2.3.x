@@ -35,7 +35,10 @@ class ControllerExtensionPaymentBluepayment extends Controller
         $this->load->model('setting/setting');
         $this->load->language($this->ext_path);
         $this->load->model('localisation/order_status');
+        $this->load->model('extension/payment/bluepayment');
         $this->load->library('bluepayment/Validator/AdminFormValidator');
+
+        $this->model_extension_payment_bluepayment->checkUpdate();
 
         $this->document->setTitle($this->language->get('heading_title'));
         $this->document->addScript('view/javascript/bluepayment/bluepayment.js');
@@ -103,34 +106,14 @@ class ControllerExtensionPaymentBluepayment extends Controller
 
     public function install()
     {
-        $this->load->model('setting/setting');
-
-        $this->model_setting_setting->editSetting('payment_bluepayment', [
-            'bluepayment_status' => 0,
-            'bluepayment_test_mode' => 1,
-            'bluepayment_currency' => null,
-            'bluepayment_status_pending' => self::STATUS_PENDING,
-            'bluepayment_status_failed' => self::STATUS_FAILED,
-            'bluepayment_status_success' => self::STATUS_PROCESSING,
-        ]);
+        $this->load->model('extension/payment/bluepayment');
+        $this->model_extension_payment_bluepayment->install();
     }
 
     public function uninstall()
     {
-        $this->load->model('setting/setting');
-
-        $settings_to_delete = [
-            'bluepayment_status',
-            'bluepayment_test_mode',
-            'bluepayment_currency',
-            'bluepayment_status_pending',
-            'bluepayment_status_failed',
-            'bluepayment_status_success',
-        ];
-
-        foreach ($settings_to_delete as $setting_to_delete) {
-            $this->model_setting_setting->deleteSetting($setting_to_delete);
-        }
+        $this->load->model('extension/payment/bluepayment');
+        $this->model_extension_payment_bluepayment->uninstall();
     }
 
     public function refreshLog()

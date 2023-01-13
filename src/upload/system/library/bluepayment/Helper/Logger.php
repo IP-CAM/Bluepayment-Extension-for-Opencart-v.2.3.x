@@ -1,6 +1,6 @@
 <?php
 
-namespace bluepayment\Helper;
+namespace BluePayment\Helper;
 
 require_once DIR_SYSTEM . '/library/bluemedia-sdk-php/index.php';
 
