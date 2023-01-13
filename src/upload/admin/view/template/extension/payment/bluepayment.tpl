@@ -40,7 +40,7 @@
                 <div class="introduction">
                     <div class="introduction--row">
                         <div class="introduction--logo_container">
-                            <img src="/admin/view/images/bluepayment/logo.svg" class="introduction--logo" alt="Blue Media" />
+                            <img src="/admin/view/image/bluepayment/logo.svg" class="introduction--logo" alt="Blue Media" />
                         </div>
                         <div class="introduction--col">
                             <div class="introduction--check"></div>

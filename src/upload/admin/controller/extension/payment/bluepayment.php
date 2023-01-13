@@ -42,7 +42,7 @@ class ControllerExtensionPaymentBluepayment extends Controller
 
         $this->document->setTitle($this->language->get('heading_title'));
         $this->document->addScript('view/javascript/bluepayment/bluepayment.js');
-        $this->document->addStyle('view/css/bluepayment/bluepayment.css');
+        $this->document->addStyle('view/stylesheet/bluepayment/bluepayment.css');
 
         if ($this->request->server['REQUEST_METHOD'] === 'POST') {
             $this->request->post['bluepayment_currency'] = $this->prepareCurrenciesData(
