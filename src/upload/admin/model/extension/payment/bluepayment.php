@@ -1,8 +1,10 @@
 <?php
 
+use BluePayment\Dictionary\BluepaymentDictionary;
+
 class ModelExtensionPaymentBluepayment extends Model
 {
-    const VERSION = '1.0.5';
+    const VERSION = BluepaymentDictionary::EXTENSION_VERSION;
 
     const CONFIG_CODE = 'bluepayment';
     const VERSION_CONFIG_KEY = 'bluepayment_version';

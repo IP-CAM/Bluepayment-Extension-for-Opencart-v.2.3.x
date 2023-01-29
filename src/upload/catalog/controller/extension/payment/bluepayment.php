@@ -33,6 +33,7 @@ class ControllerExtensionPaymentBluepayment extends ControllerExtensionPaymentBl
                 $this->getGatewayMode()
             );
 
+            /** @var \BlueMedia\OnlinePayments\Model\TransactionInit $transactionData */
             $transactionData = $this->TransactionBuilder->build(
                 $orderInfo,
                 $credentials->getServiceId(),
@@ -43,6 +44,14 @@ class ControllerExtensionPaymentBluepayment extends ControllerExtensionPaymentBl
                 $this->session->data['order_id'],
                 $this->config->get('bluepayment_status_pending'),
                 $this->language->get('text_history_payment_pending')
+            );
+
+            $this->Logger->log(
+                LogLevel::INFO,
+                'Data in ' . __METHOD__,
+                [
+                    'Transation Data' => json_encode($transactionData->toArray()),
+                ]
             );
 
             $result = $gateway->doInitTransaction($transactionData);

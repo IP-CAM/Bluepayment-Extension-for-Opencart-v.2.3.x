@@ -5,6 +5,7 @@ namespace BlueMedia\OnlinePayments\Model;
 use BlueMedia\OnlinePayments\Util\Formatter;
 use BlueMedia\OnlinePayments\Util\Sorter;
 use BlueMedia\OnlinePayments\Util\Validator;
+use BluePayment\Dictionary\BluepaymentDictionary;
 use DateTime;
 use DomainException;
 
@@ -126,6 +127,24 @@ class TransactionInit extends AbstractModel
      * @var string
      */
     protected $screenType = '';
+
+    /**
+     * Platform name (OpenCart)
+     *
+     * @var string
+     */
+    protected $platformName = 'OpenCart';
+
+    /**
+     * @var string
+     */
+    protected $platformVersion = VERSION;
+
+    /**
+     * @var string
+     */
+    protected $platformPluginVersion = BluepaymentDictionary::EXTENSION_VERSION;
+
 
     /**
      * @return string
@@ -507,6 +526,35 @@ class TransactionInit extends AbstractModel
     {
         return $this->validityTime;
     }
+    /**
+     * Return platformName.
+     *
+     * @return string
+     */
+    public function getPlatformName()
+    {
+        return $this->platformName;
+    }
+
+    /**
+     * Get platformVersion.
+     *
+     * @return string
+     */
+    public function getPlatformVersion()
+    {
+        return $this->platformVersion;
+    }
+
+    /**
+     * Get platformPluginVersion.
+     *
+     * @return string
+     */
+    public function getPlatformPluginVersion()
+    {
+        return $this->platformPluginVersion;
+    }
 
     /**
      * Validates model.
@@ -584,6 +632,10 @@ class TransactionInit extends AbstractModel
         if ($this->getDefaultRegulationsAcceptanceTime() != '') {
             $result['DefaultRegulationAcceptanceTime'] = $this->getDefaultRegulationsAcceptanceTime();
         }
+
+        $result['PlatformName'] = $this->getPlatformName();
+        $result['PlatformVersion'] = $this->getPlatformVersion();
+        $result['PlatformPluginVersion'] = $this->getPlatformPluginVersion();
 
         $result['Hash'] = $this->getHash();
 
