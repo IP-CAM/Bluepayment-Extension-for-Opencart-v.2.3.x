@@ -33,7 +33,7 @@ $_['log_file_download_error'] = 'Plik z logami nie został znaleziony lub jest p
 $_['error_empty_status'] = 'Podano nieprawidłowy status. Wybierz opcję Włącz lub Wyłącz.';
 $_['error_empty_test_mode'] = 'Wybierz tryb testowy. Wybierz opcję Tak lub Nie.';
 $_['at_least_one_currency_settings_required'] = 'Ustawienia dla co najmniej jednej waluty muszą być uzupełnione.';
-$_['currency_settings_both_values_required'] = 'Zarówno identyfikator serwisu partnera jak i klucz współdzielony są wymagane dla "%s".';
+$_['currency_settings_both_values_required'] = 'Zarówno identyfikator serwisu partnera jak i klucz konfiguracyjny są wymagane dla "%s".';
 $_['currency_settings_service_id_integer_required'] = 'Identyfikator serwisu partnera dla %s musi być liczbą.';
 $_['error_empty_field'] = 'Pole jest wymagane.';
 $_['error_integer_field'] = 'Pole wymaga wartości numerycznej.';
@@ -46,7 +46,7 @@ $_['pending_status'] = 'Status oczekiwania na płatność';
 $_['success_status'] = 'Status prawidłowej płatności';
 $_['failed_status'] = 'Status nieprawidłowej płatności';
 $_['service_id'] = 'Identyfikator serwisu partnera';
-$_['shared_key'] = 'Klucz współdzielony';
+$_['shared_key'] = 'Klucz konfiguracyjny (hash)';
 $_['select_log_file'] = 'Wybierz plik';
 
 // Other
@@ -58,6 +58,6 @@ $_['cancel'] = 'Anuluj';
 
 // Helpers
 $_['helper_test_mode'] = 'Pozwala on na sprawdzenie działania modułu bez konieczności opłacania zamówienia (w trybie testowym nie są pobierane żadne opłaty za zamówienie).';
-$_['helper_test_mode_alert_1'] = 'Identyfikator serwisu i klucz współdzielony dla środowiska testowego różnią się od danych produkcyjnych.';
+$_['helper_test_mode_alert_1'] = 'Identyfikator serwisu i klucz konfiguracyjny dla środowiska testowego różnią się od danych produkcyjnych.';
 $_['helper_test_mode_alert_2'] = 'Żeby uzyskać dane do środowiska testowego,';
 $_['helper_test_mode_alert_3'] = 'skontaktuj się z nami';

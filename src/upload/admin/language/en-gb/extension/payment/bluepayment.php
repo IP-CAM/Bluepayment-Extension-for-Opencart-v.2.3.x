@@ -33,7 +33,7 @@ $_['log_file_download_error'] = 'Log file not found or file is empty.';
 $_['error_empty_status'] = 'Status is not defined. Use Enabled or Disabled option.';
 $_['error_empty_test_mode'] = 'Select test mode. Use Yes or No option.';
 $_['at_least_one_currency_settings_required'] = 'You need to fill at least one currency settings.';
-$_['currency_settings_both_values_required'] = 'Both fields "Partner\'s website ID" and "Shared key" are required for "%s" currency.';
+$_['currency_settings_both_values_required'] = 'Both fields "Partner\'s website ID" and "Configuration key (hash)" are required for "%s" currency.';
 $_['currency_settings_service_id_integer_required'] = 'Partner\'s website ID for %s must be a numeric value.';
 $_['error_empty_field'] = 'Field is required.';
 $_['error_integer_field'] = 'Field requires a numeric value.';
@@ -46,7 +46,7 @@ $_['pending_status'] = 'Payment pending status';
 $_['success_status'] = 'Payment successful status';
 $_['failed_status'] = 'Payment failed status';
 $_['service_id'] = 'Partner\'s website ID';
-$_['shared_key'] = 'Shared key';
+$_['shared_key'] = 'Configuration key (hash)';
 $_['select_log_file'] = 'Choose log file';
 
 // Other
@@ -58,6 +58,6 @@ $_['cancel'] = 'Cancel';
 
 // Helpers
 $_['helper_test_mode'] = 'It allows you to check the module without paying for the order (no order payments are charged in test mode).';
-$_['helper_test_mode_alert_1'] = 'Partner\'s website ID and Shared key are different for production and testing environment.';
+$_['helper_test_mode_alert_1'] = 'Partner\'s website ID and Configuration key (hash) are different for production and testing environment.';
 $_['helper_test_mode_alert_2'] = 'To get the data for the test environment,';
 $_['helper_test_mode_alert_3'] = 'contact us';

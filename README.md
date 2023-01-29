@@ -78,7 +78,7 @@ Jeżeli wybierzesz środowisko testowe, moduł nie będzie przetwarzał żadnych
 
 1. **Identyfikator serwisu partnera** – ma wartość liczbową i jest unikalny dla każdego sklepu (otrzymasz go od Blue Media).
 
-2. **Klucz współdzielony** – unikalny klucz przypisany do danego sklepu (otrzymasz go od Blue Media).
+2. **Klucz konfiguracyjny (hash)** – unikalny klucz przypisany do danego sklepu (otrzymasz go od Blue Media).
 
 <img width="514" alt="Przykładowy wygląd ustawień  poszczególnych walut" src="https://user-images.githubusercontent.com/87177993/126635294-083fb905-8700-4ee0-b171-9c5b7bb3ffe7.png">
 
