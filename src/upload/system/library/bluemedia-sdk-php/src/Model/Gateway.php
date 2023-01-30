@@ -7,7 +7,6 @@ use DomainException;
 
 class Gateway extends AbstractModel
 {
-    const GATEWAY_ID_CARD = 1500;
     const GATEWAY_ID_MTRANSFER = 3;
     const GATEWAY_ID_MULTITRANSFER = 17;
     const GATEWAY_ID_BZWBK = 27;
@@ -38,10 +37,23 @@ class Gateway extends AbstractModel
     const GATEWAY_ID_SPOLDZIELCZA_GRUPA_BANKOWA = 35;
     const GATEWAY_ID_BGZ = 71;
     const GATEWAY_ID_OTHER = 9;
+
+    // Cards
+    const GATEWAY_ID_CARD = 1500;
+    const GATEWAY_ID_ONECLICK = 1503;
+    const GATEWAY_ID_IFRAME = 1506;
+
+    // Wallets
     const GATEWAY_ID_BLIK = 509;
     const GATEWAY_ID_VISA_CHECKOUT = 1511;
     const GATEWAY_ID_GOOGLE_PAY = 1512;
-    const GATEWAY_ID_IFRAME = 1506;
+    const GATEWAY_ID_VISA_MOBILE = 1523;
+
+    // Installments
+    const GATEWAY_ID_SMARTNEY = 700;
+    const HUB_GATEWAY_ID = 702;
+    const PAYPO_GATEWAY_ID = 705;
+    const ALIOR_INSTALLMENTS_GATEWAY_ID = 1506;
 
     const GATEWAY_TYPE_PBL = 'PBL';
     const GATEWAY_TYPE_FAST_TRANSFER = 'Szybki przelew';

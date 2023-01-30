@@ -1,5 +1,6 @@
 <?php
-namespace bluepayment\Provider;
+
+namespace BluePayment\Provider;
 
 require_once DIR_SYSTEM . '/library/bluepayment/ValueObject/ServiceCredentials.php';
 

@@ -1,5 +1,6 @@
 <?php
-namespace bluepayment\ValueObject;
+
+namespace BluePayment\ValueObject;
 
 final class ServiceCredentials
 {

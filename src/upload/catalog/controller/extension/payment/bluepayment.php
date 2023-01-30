@@ -1,35 +1,14 @@
 <?php
 
 require_once DIR_SYSTEM . '/library/bluemedia-sdk-php/index.php';
+require_once __DIR__ . '/bluepayment_base.php';
 
 use BlueMedia\OnlinePayments\Action\ITN\Transformer;
 use Psr\Log\LogLevel;
 use BlueMedia\OnlinePayments\Gateway;
 
-class ControllerExtensionPaymentBluepayment extends Controller
+class ControllerExtensionPaymentBluepayment extends ControllerExtensionPaymentBluepaymentBase
 {
-    private $view_data = [];
-
-    public function __construct($registry)
-    {
-        parent::__construct($registry);
-
-        $this->load->library('bluepayment/Dictionary/BluepaymentDictionary');
-        $this->load->library('bluepayment/Helper/Logger');
-        $this->load->library('bluepayment/Provider/ServiceCredentialsProvider');
-        $this->load->library('bluepayment/Helper/ParamSuffixer');
-        $this->load->language($this->BluepaymentDictionary->getExtensionPath());
-        $this->load->model('checkout/order');
-    }
-
-    public function index()
-    {
-        $this->addLangContents();
-        $this->view_data['start_transaction_uri'] = $this->BluepaymentDictionary->getStartTransactionUri();
-
-        return $this->load->view($this->BluepaymentDictionary->getExtensionPath(), $this->view_data);
-    }
-
     public function processCheckout()
     {
         if (!isset($this->session->data['order_id']) || !$this->ServiceCredentialsProvider->currencyServiceExists()) {
@@ -39,22 +18,27 @@ class ControllerExtensionPaymentBluepayment extends Controller
         $this->load->model('checkout/order');
         $this->load->library('bluepayment/Builder/TransactionBuilder');
 
-        $order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
+        $orderInfo = $this->model_checkout_order->getOrder($this->session->data['order_id']);
 
         try {
-            if ($order_info === false) {
+            if ($orderInfo === false) {
                 throw new Exception(sprintf('Order not found %s', $this->session->data['order_id']));
             }
 
-            $service_credentials = $this->ServiceCredentialsProvider->getCurrencyServiceCredentials();
+            $credentials = $this->ServiceCredentialsProvider->getCurrencyServiceCredentials();
 
             $gateway = new Gateway(
-                $service_credentials->getServiceId(),
-                $service_credentials->getSharedKey(),
+                $credentials->getServiceId(),
+                $credentials->getSharedKey(),
                 $this->getGatewayMode()
             );
 
-            $transaction_data = $this->TransactionBuilder->build($order_info, $service_credentials->getServiceId());
+            /** @var \BlueMedia\OnlinePayments\Model\TransactionInit $transactionData */
+            $transactionData = $this->TransactionBuilder->build(
+                $orderInfo,
+                $credentials->getServiceId(),
+                $this->request->post
+            );
 
             $this->model_checkout_order->addOrderHistory(
                 $this->session->data['order_id'],
@@ -62,7 +46,15 @@ class ControllerExtensionPaymentBluepayment extends Controller
                 $this->language->get('text_history_payment_pending')
             );
 
-            $result = $gateway->doInitTransaction($transaction_data);
+            $this->Logger->log(
+                LogLevel::INFO,
+                'Data in ' . __METHOD__,
+                [
+                    'Transation Data' => json_encode($transactionData->toArray()),
+                ]
+            );
+
+            $result = $gateway->doInitTransaction($transactionData);
 
             $redirectUrl = property_exists($result, 'redirecturl') ? (string)$result->redirecturl : null;
 

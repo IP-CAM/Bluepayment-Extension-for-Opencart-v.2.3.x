@@ -1,6 +1,6 @@
 <?php
 
-namespace bluepayment\Service\Itn\Result;
+namespace BluePayment\Service\Itn\Result;
 
 require_once 'ITNResponseType.php';
 

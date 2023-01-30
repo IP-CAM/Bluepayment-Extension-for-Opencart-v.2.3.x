@@ -1,6 +1,6 @@
 <?php
 
-namespace bluepayment\Validator;
+namespace BluePayment\Validator;
 
 final class AdminFormValidator
 {
