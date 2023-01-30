@@ -22,6 +22,8 @@ Do najważniejszych funkcji modułu zalicza się:
 
 Wersja 1.0.5
 - Dodaliśmy obsługę Visa Mobile.
+- Ustandaryzowaliśmy tekst **Klucz konfiguracyjny (hash)** (wcześniej _Klucz współdzielony_) w konfiguracji modułu.
+- Dodaliśmy informację o aktualnej wersji platformy oraz moduły podczas rozpoczęcia transakcji.
 
 Wersja 1.0.1
 - Dodaliśmy komunikat pomocniczy dot. środowiska testowego w panelu administracyjnym.
