@@ -11,7 +11,7 @@ use Monolog\Formatter\LineFormatter;
 
 final class Logger
 {
-    const LOG_NAME = 'Blue_Media';
+    const LOG_NAME = 'Autopay';
     const LOG_FILENAME = '/bluepayment.log';
     const MAX_LOG_FILES = 30;
 

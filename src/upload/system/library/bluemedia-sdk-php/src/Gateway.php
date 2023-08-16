@@ -25,8 +25,8 @@ class Gateway
     const MODE_SANDBOX = 'sandbox';
     const MODE_LIVE = 'live';
 
-    const PAYMENT_DOMAIN_SANDBOX = 'pay-accept.bm.pl';
-    const PAYMENT_DOMAIN_LIVE = 'pay.bm.pl';
+    const PAYMENT_DOMAIN_SANDBOX = 'testpay.autopay.eu';
+    const PAYMENT_DOMAIN_LIVE = 'pay.autopay.eu';
 
     const PAYMENT_ACTON_PAYMENT = '/payment';
     const PAYMENT_ACTON_PAYWAY_LIST = '/paywayList';
