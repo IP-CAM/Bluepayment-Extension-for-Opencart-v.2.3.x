@@ -1,6 +1,7 @@
 <?php
 // Heading
-$_['heading_title'] = 'Płatności online BM';
+$_['heading_title'] = 'Płatności online Autopay';
+$_['text_bluepayment'] = '<a href="https://autopay.eu" target="_blank"><img src="view/image/bluepayment/logo.svg" alt="Płatności online Autopay" title="Płatności online Autopay" style="height: 20px;" /></a>';
 
 // Introduction
 $_['prepare_regulations'] = 'Przygotuj regulamin sklepu 10% taniej.';
@@ -23,7 +24,7 @@ $_['button_cancel'] = 'Anuluj';
 $_['download_module_logs'] = 'Pobierz logi modułu';
 
 // Text
-$_['text_success'] = 'Sukces: Zmodyfikowano moduł BluePayment!';
+$_['text_success'] = 'Sukces: Zmodyfikowano moduł Autopay!';
 $_['text_module_edit'] = 'Konfiguracja modulu';
 $_['currency_settings'] = 'Ustawienia modułu dla walut';
 $_['info_log_loading'] = 'Trwa ładowanie pliku z logami...';

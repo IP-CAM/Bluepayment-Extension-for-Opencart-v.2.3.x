@@ -19,7 +19,7 @@
     align-items: center;
 }
 .introduction--num {
-    border: 1px solid #00b5dd;
+    border: 1px solid #199BFA;
     border-radius: 100px;
     min-width: 40px;
     width: 40px;
@@ -45,7 +45,10 @@
     margin-right: 5px;
 }
 .introduction--logo_container {
-    flex-basis: 150px;
+    flex-basis: 200px;
+    height: 50px;
+    align-items: center;
+    display: flex;
 }
 .introduction--logo {
     max-width: 150px;
