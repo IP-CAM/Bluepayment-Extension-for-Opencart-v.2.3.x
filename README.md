@@ -49,7 +49,7 @@ Możesz zainstalować moduł płatności jedną z dwóch metod – automatycznie
 2. Z listy rozwijanej wybierz **Payments**
 3. Wyszukaj moduł **Płatności online Autopay**, zainstaluj ją, a następnie przejdź do konfiguracji modułu.
 
-<img width="611" alt="Widok modułu w zakładce Rozszerzenia" src="https://user-images.githubusercontent.com/87177993/126613447-92c964e1-4f31-4ac3-91e4-663f47380f9a.png">
+[Widok modułu w zakładce Rozszerzenia](docs/configuration1.png)
 
 *Widok modułu w zakładce "Rozszerzenia"*
 
