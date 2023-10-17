@@ -13,6 +13,7 @@ final class Logger
 {
     const LOG_NAME = 'Autopay';
     const LOG_FILENAME = '/bluepayment.log';
+    const LOG_FILE_PATH = DIR_LOGS . self::LOG_FILENAME
     const MAX_LOG_FILES = 30;
 
     private $registry;
@@ -117,9 +118,7 @@ final class Logger
         $formatter = new LineFormatter(LineFormatter::SIMPLE_FORMAT, LineFormatter::SIMPLE_DATE);
         $formatter->includeStacktraces(true);
 
-        $logFilePath = DIR_LOGS . self::LOG_FILENAME;
-
-        $handler = new RotatingFileHandler($logFilePath, self::MAX_LOG_FILES, MonologLogger::INFO);
+        $handler = new RotatingFileHandler(self::LOG_FILE_PATH, self::MAX_LOG_FILES, MonologLogger::INFO);
         $handler->setFormatter($formatter);
 
         $this->logger->pushHandler($handler);

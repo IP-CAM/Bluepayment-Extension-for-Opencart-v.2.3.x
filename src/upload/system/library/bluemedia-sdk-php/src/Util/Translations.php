@@ -28,7 +28,7 @@ class Translations
             $language = 'pl';
             Logger::log(
                 Logger::WARNING,
-                sprintf('Unsupported language "%s" given for Autopay SDK. Setting Polish language as default.', $language)
+                sprintf('Unsupported language "%s" given for BlueMedia SDK. Setting Polish language as default.', $language)
             );
         }
 
