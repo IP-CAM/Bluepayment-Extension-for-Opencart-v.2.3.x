@@ -8,6 +8,7 @@ use BlueMedia\OnlinePayments\Util\Validator;
 use BluePayment\Dictionary\BluepaymentDictionary;
 use DateTime;
 use DomainException;
+use ModelExtensionPaymentBluepayment;
 
 /**
  * Model for init transaction
@@ -589,7 +590,7 @@ class TransactionInit extends AbstractModel
         $result['OrderID']   = $this->getOrderId();
         $result['Amount']    = $this->getAmount();
 
-        if ($this->getDescription() != '') {
+        if (!empty($this->getDescription())) {
             $result['Description'] = $this->getDescription();
         }
 
@@ -597,39 +598,39 @@ class TransactionInit extends AbstractModel
             $result['GatewayID'] = $this->getGatewayId();
         }
 
-        if ($this->getCurrency() != '') {
+        if (!empty($this->getCurrency())) {
             $result['Currency'] = $this->getCurrency();
         }
 
-        if ($this->getCustomerEmail() != '') {
+        if (!empty($this->getCustomerEmail())) {
             $result['CustomerEmail'] = $this->getCustomerEmail();
         }
 
-        if ($this->getCustomerIp() != '') {
+        if (!empty($this->getCustomerIp())) {
             $result['CustomerIP'] = $this->getCustomerIp();
         }
 
-        if ($this->getTitle() != '') {
+        if (!empty($this->getTitle())) {
             $result['Title'] = $this->getTitle();
         }
 
-        if ($this->getAuthorizationCode() != '') {
+        if (!empty($this->getAuthorizationCode())) {
             $result['AuthorizationCode'] = $this->getAuthorizationCode();
         }
 
-        if ($this->getScreenType() != '') {
+        if (!empty($this->getScreenType())) {
             $result['ScreenType'] = $this->getScreenType();
         }
 
-        if ($this->getDefaultRegulationAcceptanceID() != '') {
+        if (!empty($this->getDefaultRegulationAcceptanceID())) {
             $result['DefaultRegulationAcceptanceID'] = $this->getDefaultRegulationAcceptanceID();
         }
 
-        if ($this->getDefaultRegulationAcceptanceState() != '') {
+        if (!empty($this->getDefaultRegulationAcceptanceState())) {
             $result['DefaultRegulationAcceptanceState'] = $this->getDefaultRegulationAcceptanceState();
         }
 
-        if ($this->getDefaultRegulationsAcceptanceTime() != '') {
+        if (!empty($this->getDefaultRegulationsAcceptanceTime())) {
             $result['DefaultRegulationAcceptanceTime'] = $this->getDefaultRegulationsAcceptanceTime();
         }
 

@@ -34,8 +34,9 @@ class ModelExtensionPaymentBluepaymentVisa extends Model
             return [];
         }
 
+        $currency = $this->ServiceCredentialsProvider->getCurrentCurrency();
         // Is gateway available?
-        if (!$this->Gateway->isVisaEnabled()) {
+        if (!$currency || !$this->Gateway->isVisaEnabled($currency)) {
             return [];
         }
 

@@ -39,9 +39,15 @@ final class ServiceCredentialsProvider
         );
     }
 
+    public function getCurrentCurrency()
+    {
+        return $this->current_currency;
+    }
+
     private function getAllServiceCredentials()
     {
-        $settings = $this->registry->get('model_setting_setting')->getSetting('bluepayment');
-        return $settings['bluepayment_currency'];
+        return json_decode(
+            $this->registry->get('model_setting_setting')->getSettingValue('payment_bluepayment_currency')
+        );
     }
 }
