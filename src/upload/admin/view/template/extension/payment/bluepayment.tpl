@@ -46,7 +46,7 @@
                             <div class="introduction--check"></div>
                             <div class="introduction--content">
                                 <?php echo $prepare_regulations; ?><br />
-                                <a href="https://developers.bluemedia.pl/legal-geek?mtm_campaign=opencart_legalgeek&mtm_source=opencart_backoffice&mtm_medium=cta"
+                                <a href="https://marketplace.autopay.pl/?mtm_campaign=opencart_legalgeek&mtm_source=opencart_backoffice&mtm_medium=cta"
                                    target="_blank"><?php echo $introduction_learn; ?></a>
                             </div>
                         </div>

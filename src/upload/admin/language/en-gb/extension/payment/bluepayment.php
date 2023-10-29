@@ -5,7 +5,7 @@ $_['text_bluepayment'] = '<a href="https://autopay.eu" target="_blank"><img src=
 
 // Introduction
 $_['prepare_regulations'] = 'Prepare store regulations 10% off.';
-$_['fee'] = 'Fee only 1,19%.';
+$_['fee'] = 'Prowizja tylko 1,19% + 0,25 zł.';
 $_['introduction_title'] = 'How to get started?';
 $_['introduction_first_step'] = 'Create a free account on the site.';
 $_['introduction_register'] = 'Register';
