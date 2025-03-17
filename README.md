@@ -1,6 +1,8 @@
 # Instrukcja instalacji oraz obsługi wtyczki „Płatności online Autopay” dla platformy OpenCart 2.3
 
-**Moduł przeznaczony jest tylko dla OpenCart w wersji 2.3. W celu pobrania modułu dla wersji 3.x, przejdź [tutaj.](https://github.com/bluepayment-plugin/opencart-plugin)** 
+**Moduł przeznaczony jest tylko dla OpenCart w wersji 2.3.  
+W celu pobrania modułu dla wersji 3.x, przejdź [tutaj.](https://github.com/bluepayment-plugin/opencart-plugin)
+W celu pobrania modułu dla wersji 4.x, przejdź [tutaj.](https://github.com/bluepayment-plugin/opencart-4-plugin)** 
 
 ## Podstawowe informacje
 Płatności online Autopay to moduł płatności umożliwiający realizację transakcji bezgotówkowych w sklepie opartym na platformie OpenCart. Jeżeli jeszcze nie masz wtyczki, możesz ją pobrać [tutaj.](https://github.com/bluepayment-plugin/opencart-plugin/raw/master/bm.ocmod.zip)
